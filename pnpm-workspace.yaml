@@ -1,0 +1,11 @@
+packages:
+  - "."
+
+allowBuilds:
+  esbuild: set this to true or false
+  workerd: set this to true or false
+
+# Share Vite+'s core and Vitest with plugins to avoid duplicate runtimes.
+overrides:
+  vite: "npm:@voidzero-dev/vite-plus-core@1.4.0"
+  vitest: "5.0.5"

@@ -1,0 +1,36 @@
+{
+	"name": "garmin-mcp",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "cf dev",
+		"build": "cf build",
+		"deploy": "cf deploy",
+		"check": "cf workers types && vp check",
+		"lint": "cf workers types && vp check --no-fmt --deny-warnings",
+		"format": "vp fmt",
+		"format:check": "vp fmt --check",
+		"test": "vp test run",
+		"typecheck": "cf workers types && vp check --no-fmt --no-lint"
+	},
+	"dependencies": {
+		"@garmin/fitsdk": "21.221.0",
+		"@modelcontextprotocol/server": "2.4.0",
+		"fflate": "0.8.3",
+		"zod": "4.6.7"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "^2.0.0-rc.0",
+		"@cloudflare/vitest-plugin": "^1.8.3",
+		"cf": "1.0.0-rc.0",
+		"typescript": "^7.0.2",
+		"vite": "npm:@voidzero-dev/vite-plus-core@1.4.0",
+		"vite-plus": "1.4.0",
+		"vitest": "5.0.5"
+	},
+	"engines": {
+		"node": "^22.23.0 || ^24.22.0 || ^26.12.0"
+	},
+	"packageManager": "pnpm@11.1.0"
+}

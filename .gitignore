@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.cloudflare/
+.wrangler/
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+*.env
+.garmin.env
+*.log
+.DS_Store
